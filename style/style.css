@@ -296,6 +296,18 @@ body {
   body {
     font-size: 0.4em;
   }
+  #two-tab {
+    margin-right: 6em;
+  }
+  .panel {
+    padding: 1em 1.5em;
+  }
+  .home {
+    gap: 3em;
+  }
+  .introduction > h3 {
+    font-size: 2.8em;
+  }
 }
 /*
 @media screen and (max-width: 1000px) {
