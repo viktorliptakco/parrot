@@ -346,6 +346,12 @@ body {
     }
 }
 
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 0.4em;
+    }
+}
+
 /*
 @media screen and (max-width: 1000px) {
     .introduction > p {
