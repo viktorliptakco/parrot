@@ -1,0 +1,444 @@
+//Imports
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+//Variables
+
+$basic-radius: 1.35em;
+
+$dark: rgb(15,19,34);
+$lightblue: #7BD3EA;
+$lightgreen: #B9EDDD;
+$purple: rgb(184,191,255);
+$greenblue: rgb(141,223,203);
+$lightyellow: rgb(247, 249, 127);
+$lightred: #ffb3a0;
+
+//General
+
+body {
+    margin: 0;
+    padding: 0 1.875em;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.container {
+    margin: 0.5em auto;
+    max-width: 91em;
+}
+
+//Panel-section
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    //font-size: 0.875em;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;font-family: 'Quicksand';
+    font-weight: 700;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 1em 2.4em;
+    margin-left: 0.625em;
+    display: inline-block;
+    border-radius: $basic-radius $basic-radius 0em 0em;
+}
+
+#one-tab {
+    & span {
+        background-color: $lightyellow;
+        padding: 0.5em 0.9375em;
+        border-radius: 1.5625em;
+    }
+}
+
+#two-tab {
+    margin-right: 9.375em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    padding: 0.96em 0;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    &> p {
+        background-color: #000;
+        color: white;
+        width: 1.125em;
+        text-align: center;
+        padding: 0.0625em;
+        border-radius: 50%;
+        margin: 0 0.5em 0 0;
+    }
+}
+
+.panels {
+    width: 100%;
+    font-family: 'Montserrat';
+}
+
+.panel {
+    background: $lightblue;
+    display: none;
+    //min-height: 31.375em;
+    padding: 1.875em 3.125em; 
+    border-radius: $basic-radius; 
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#one-panel {
+    border-radius: $basic-radius 0 $basic-radius $basic-radius;
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    gap: 10em;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    &> h3 {
+        margin: 0;
+        font-size: 3.5em;
+        font-weight: 600;
+        //letter-spacing: 0.03em;
+        &> span {
+            color: $lightyellow;
+        }
+    }
+}
+
+.cv {
+    display: flex;
+    align-items: center;
+    &> a {
+        position: relative;
+        top: 0;
+        max-width: fit-content;
+        background-color: $lightyellow;
+        color: #000;
+        font-size: 1em;
+        padding: 0.95em 1.325em;
+        border-radius: 1.5625em;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+            top: 0.1875em;   
+            text-decoration: underline;    
+        }
+    }
+    &> .parrot{
+        height: 1.875em;
+        margin-left: 1em;
+    }
+}
+
+.profile-picture {
+    background-color: $lightyellow;
+    background-image: url(../img/viktorio.png);
+    background-size: 115%;
+    background-position: center 0.625em;
+    background-repeat: no-repeat;
+    width: 16em;
+    height: 24em;
+    margin: 1.5625em auto;
+    border: 0.3em solid $lightyellow;
+    border-radius: 10em;
+    transition: all 0.3s ease;
+    &:hover {
+        border-radius: 3em;
+    }
+}
+
+.panel-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.radio {
+    display: none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel {
+    display: block;
+}
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab {
+    background: $lightblue;
+    color: #000;
+    //transition: background-color 0.15s ease;
+}
+
+//Portfolio
+
+.portfolio {
+    font-family: "Montserrat";
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: space-between;
+    margin-top: 1.2em;
+}
+
+.my-projects {
+    & h2 {
+        //margin: 0.5em 0; 
+        font-size: 4.5em;
+        font-weight: 600;
+    }
+    & span {
+        color: $lightblue;
+    }
+}
+
+.about-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2em;
+    &> a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        //min-width: 22.5em;
+        //min-height: 22.5em;
+        border-radius: $basic-radius;
+        color: #000;
+        text-decoration: none;
+        &:nth-child(1) {
+            background-color: $lightred;
+        }
+        &:nth-child(2) {
+            background-color: $purple;
+        }
+        &> h5 {
+            margin: 0.2em;
+            font-size: 3.5em;
+            font-weight: 500;
+        }
+        &> p {
+            margin: 0;
+            font-size: 4em;
+            font-weight: 700;
+        }
+    }
+}
+
+//Media queries
+
+@media screen and (max-width: 1350px) {
+    .introduction > h3 {
+        font-size: 3.6em;
+    }
+
+    .profile-picture {
+        width: 14em;
+        height: 22em;
+    }
+
+    .my-projects  {
+        & h2 {
+        font-size: 4.2em;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 0.9em;
+    }
+
+    .logo {
+        padding: 0.86em 0;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    body {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        padding: 0 1.35em;
+        font-size: 0.75em;
+    }
+
+    .profile-picture {
+        width: 12em;
+        height: 19em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        padding: 0 1em;
+        font-size: 0.7em;
+    }
+
+    .panel {
+        padding: 1.5em 2.5em;
+    }
+
+    .introduction > h3 {
+        font-size: 3.2em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        font-size: 0.65em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 0.575em;
+    }
+
+    .home {
+        gap: 5em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 0.5em;
+    }
+
+    .portfolio {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 0.425em;
+    }
+}
+
+/*
+@media screen and (max-width: 1000px) {
+    .introduction > p {
+        font-size: 2.5em;
+    }
+
+    .profile-picture {
+        width: 160px;
+        height: 260px;
+        margin: 25px 70px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .panel {
+        padding: 30px 40px;
+    }
+
+    .introduction > p {
+        font-size: 36px;
+    }
+
+    .cv {
+        font-size: 12px;
+    }
+
+    .profile-picture {
+        width: 150px;
+        height: 240px;
+        margin: 25px 60px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        padding: 0 20px;
+    }
+
+    #two-tab {
+        margin-right: 100px;
+    }
+
+    .introduction > p {
+        font-size: 32px;
+    }
+
+    .profile-picture {
+        width: 135px;
+        height: 225px;
+        margin: 20px 40px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .logo {
+        padding: 8px 0;
+        &> p {
+            width: 16px;
+        }
+    }
+
+    .tabs {
+        font-size: 13px;
+    }
+
+    .tab {
+        padding: 10px 18px;
+    }
+
+    #one-tab span {
+        padding: 5px 10px;
+    }
+    
+    .panel {
+        padding: 20px 30px;
+    }
+
+    #two-tab {
+        margin-right: 50px;
+    }
+
+    .introduction > p {
+        font-size: 28px;
+    }    
+    
+    .profile-picture {
+        width: 125px;
+        height: 200px;
+        margin: 20px 30px;
+    }
+}
+*/
