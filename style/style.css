@@ -1,41 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
-.custom-shape {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.custom-shape::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-          clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  z-index: -1;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  padding: 0 1.875em;
-  transition: all 0.3s ease;
+  padding: 0.5em 1.875em;
+  font-family: "Montserrat";
   font-size: 1em;
+  filter: blur(0.03em);
 }
 
 .container {
-  margin: 0.5em auto;
+  margin: 0 auto;
   max-width: 91em;
 }
 
-.tabs {
+a {
+  position: relative;
+  top: 0;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.15s ease;
+}
+a:hover {
+  top: 0.1875em;
+}
+
+header {
   display: flex;
   justify-content: space-between;
-  font-size: 0.875em;
+  align-items: center;
 }
 
 .nav-menu {
@@ -52,7 +48,7 @@ body {
   padding: 1em 2.4em;
   margin-left: 0.625em;
   display: inline-block;
-  border-radius: 1.35em 1.35em 0em 0em;
+  border-radius: 1.15em 1.15em 0em 0em;
 }
 
 #one-tab span {
@@ -61,50 +57,60 @@ body {
   border-radius: 1.5625em;
 }
 
-#two-tab {
-  margin-right: 9.375em;
-}
-
-.logo {
+.logo-and-name {
   display: flex;
   align-items: center;
-  align-self: flex-end;
-  padding: 0.96em 0;
-  font-family: "Montserrat";
+  font-size: 1.2em;
   font-weight: 700;
 }
-.logo > p {
+.logo-and-name .logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  height: 1.5em;
+  width: 1.5em;
+  margin-right: 0.5em;
+  border-radius: 1.5em;
   background-color: #000;
   color: white;
-  width: 1.125em;
+}
+
+.navigation-buttons {
+  display: flex;
+  gap: 4em;
+  margin-left: 10em;
+  font-weight: 600;
+}
+.navigation-buttons > a {
+  padding: 1em;
+}
+
+.contact {
+  background-color: #7BD3EA;
   text-align: center;
-  padding: 0.0625em;
-  border-radius: 50%;
-  margin: 0 0.5em 0 0;
+  border-radius: 1.15em 1.15em 0 0;
+  padding: 1em 2.5em;
+}
+.contact a {
+  background-color: rgb(247, 249, 127);
+  padding: 0.5em 1.5em;
+  border-radius: 1.15em;
 }
 
+/*
 .panels {
-  width: 100%;
-  font-family: "Montserrat";
-}
-
+    //width: 100%;
+    //font-family: 'Montserrat';
+}*/
 .panel {
   background: #7BD3EA;
-  display: none;
   padding: 1.875em 3.125em;
-  border-radius: 1.35em;
+  border-radius: 1.15em;
 }
 
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 #one-panel {
-  border-radius: 1.35em 0 1.35em 1.35em;
+  border-radius: 1.15em 0 1.15em 1.15em;
 }
 
 .home {
@@ -149,8 +155,9 @@ body {
   text-decoration: underline;
 }
 .cv > .parrot {
-  height: 1.875em;
+  height: 3em;
   margin-left: 1em;
+  filter: blur(0);
 }
 
 .profile-picture {
@@ -173,23 +180,6 @@ body {
 .panel-title {
   font-size: 1.5em;
   font-weight: bold;
-}
-
-.radio {
-  display: none;
-}
-
-#one:checked ~ .panels #one-panel,
-#two:checked ~ .panels #two-panel,
-#three:checked ~ .panels #three-panel {
-  display: block;
-}
-
-#one:checked ~ .tabs #one-tab,
-#two:checked ~ .tabs #two-tab,
-#three:checked ~ .tabs #three-tab {
-  background: #7BD3EA;
-  color: #000;
 }
 
 .portfolio {
@@ -218,12 +208,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  border-radius: 1.35em;
+  border-radius: 1.15em;
   color: #000;
   text-decoration: none;
 }
 .about-projects > a:nth-child(1) {
-  background-color: #ffb3a0;
+  background-color: #ffc1c1;
 }
 .about-projects > a:nth-child(2) {
   background-color: rgb(184, 191, 255);
@@ -237,6 +227,25 @@ body {
   margin: 0;
   font-size: 4em;
   font-weight: 700;
+}
+
+#three {
+  background-color: #B9EDDD;
+  margin-top: 1.2em;
+  border-radius: 1.15em;
+}
+#three > div {
+  float: left;
+  margin: 1em;
+  background-color: rgb(247, 249, 127);
+  border-radius: 1.15em;
+}
+#three img {
+  height: 10em;
+}
+#three p {
+  padding: 1em;
+  margin: 0;
 }
 
 @media screen and (max-width: 1350px) {
@@ -255,9 +264,6 @@ body {
   body {
     font-size: 0.9em;
   }
-  .logo {
-    padding: 0.84em 0;
-  }
 }
 @media screen and (max-width: 1100px) {
   body {
@@ -266,7 +272,7 @@ body {
 }
 @media screen and (max-width: 1000px) {
   body {
-    padding: 0 1.35em;
+    padding: 0.5em 1.35em;
     font-size: 0.75em;
   }
   .profile-picture {
@@ -276,7 +282,7 @@ body {
 }
 @media screen and (max-width: 900px) {
   body {
-    padding: 0 1em;
+    padding: 0.5 1em;
     font-size: 0.7em;
   }
   .panel {
@@ -303,9 +309,6 @@ body {
   body {
     font-size: 0.5em;
   }
-  .portfolio {
-    display: block;
-  }
 }
 @media screen and (max-width: 500px) {
   body {
@@ -316,109 +319,10 @@ body {
   body {
     font-size: 0.4em;
   }
-  #two-tab {
-    margin-right: 6em;
-  }
   .panel {
     padding: 1em 1.5em;
   }
   .home {
     gap: 3em;
   }
-}
-/*
-@media screen and (max-width: 1000px) {
-    .introduction > p {
-        font-size: 2.5em;
-    }
-
-    .profile-picture {
-        width: 160px;
-        height: 260px;
-        margin: 25px 70px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .panel {
-        padding: 30px 40px;
-    }
-
-    .introduction > p {
-        font-size: 36px;
-    }
-
-    .cv {
-        font-size: 12px;
-    }
-
-    .profile-picture {
-        width: 150px;
-        height: 240px;
-        margin: 25px 60px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    body {
-        padding: 0 20px;
-    }
-
-    #two-tab {
-        margin-right: 100px;
-    }
-
-    .introduction > p {
-        font-size: 32px;
-    }
-
-    .profile-picture {
-        width: 135px;
-        height: 225px;
-        margin: 20px 40px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    body {
-        padding: 0 10px;
-    }
-
-    .logo {
-        padding: 8px 0;
-        &> p {
-            width: 16px;
-        }
-    }
-
-    .tabs {
-        font-size: 13px;
-    }
-
-    .tab {
-        padding: 10px 18px;
-    }
-
-    #one-tab span {
-        padding: 5px 10px;
-    }
-
-    .panel {
-        padding: 20px 30px;
-    }
-
-    #two-tab {
-        margin-right: 50px;
-    }
-
-    .introduction > p {
-        font-size: 28px;
-    }    
-
-    .profile-picture {
-        width: 125px;
-        height: 200px;
-        margin: 20px 30px;
-    }
-}
-*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

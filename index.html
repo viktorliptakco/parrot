@@ -8,22 +8,19 @@
     <title>Viktor</title>
 </head>
 <body>
-
-    <section class="container">
-        <input class="radio" id="one" name="group" type="radio" checked>
-        <input class="radio" id="two" name="group" type="radio">
-        <input class="radio" id="three" name="group" type="radio">
-        <div class="tabs"> 
-            <div class="logo">
-                <p>V</p>
-                <span>Viktor</span>
-            </div>
-            <div class="nav-menu">
-                <label class="tab" id="one-tab" for="one"><span>Domov</span></label>
-                <label class="tab" id="two-tab" for="two">Hobby</label>
-                <label class="tab" id="three-tab" for="three">O mne</label>
-            </div>                    
+    <header class="container">
+        <div class="logo-and-name">
+            <div class="logo"><span>V</span></div>
+            <div class="name">Viktor</div>
         </div>
+        <div class="navigation-buttons">
+            <a href="#one">Kurzy</a>
+            <a href="#two">O mne</a>
+            <a href="">Hobby</a>
+        </div>
+        <div class="contact"><a href="#three">Kontakt</a></div>
+    </header>
+    <section class="container">
         <div class="panels">
             <div class="panel" id="one-panel">
                 <div class="home">
@@ -37,17 +34,9 @@
                     <div class="profile-picture"></div>
                 </div>
             </div>
-            <div class="panel" id="two-panel">
-                <div class="panel-title">Take-Away Skills</div>
-                <p>You will learn many aspects of styling web pages! You’ll be able to set up the correct file structure, edit text and colors, and create attractive layouts. With these skills, you’ll be able to customize the appearance of your web pages to suit your every need!</p>
-            </div>
-            <div class="panel" id="three-panel">
-                <div class="panel-title">Note on Prerequisites</div>
-                <p>We recommend that you complete Learn HTML before learning CSS.</p>
-            </div>
         </div>
     </section>
-    <section class="container portfolio">
+    <section class="container portfolio" id="two">
         <div class="my-projects">
             <h2>Moje Projekty<br><span>&</span> Vzdelávanie</h2>
         </div>
@@ -57,9 +46,21 @@
                 <p>6+</p>
             </a>
             <a href="">
-                2
+                <h5>Projekty</h5>
+                <p>3+</p>
             </a>
         </div>
+    </section>
+    <section class="container" id="three">
+        <div>
+            <img src="./img/parrot.png" alt="">
+        </div>
+        
+        <p>
+        Sweet gummies gummies carrot cake cotton candy cheesecake ice cream jelly-o. Ice cream cotton candy soufflé cotton candy chupa chups dessert. Marzipan chupa chups bear claw macaroon brownie bear claw icing. Toffee jelly halvah tootsie roll oat cake wafer caramels lemon drops. Cake wafer sugar plum marzipan macaroon caramels cookie apple pie cotton candy. Tootsie roll jelly candy canes icing gummies. Dragée chocolate shortbread chupa chups jujubes. Muffin oat cake icing cake danish marshmallow. Bonbon jelly-o tiramisu dessert liquorice pastry jujubes. Pudding sweet cupcake sweet dessert. Tootsie roll cheesecake cake chocolate tart jelly. Cotton candy bear claw gingerbread croissant cake pudding pie dragée. Jelly beans sesame snaps liquorice toffee dessert powder.
+        Chocolate bar tiramisu jelly beans muffin jujubes cupcake sugar plum. Jelly-o ice cream topping carrot cake icing lemon drops. Donut soufflé wafer danish wafer soufflé. Gummi bears marshmallow sweet oat cake sugar plum tart sesame snaps chocolate. Sesame snaps pie fruitcake toffee sweet roll apple pie. Toffee cotton candy lemon drops icing donut. Tart danish bonbon caramels bear claw shortbread cookie. Pie cupcake marshmallow jelly-o liquorice jujubes muffin jelly-o. Macaroon jelly-o croissant fruitcake jelly macaroon jelly pastry sesame snaps. Tart cupcake pudding pie candy jelly beans tart muffin lollipop. Cupcake gummies cheesecake shortbread croissant. Gummies pastry macaroon powder bonbon bear claw. Cake gummies tootsie roll shortbread jelly-o bear claw sweet.
+        </p>
+
     </section>
 </body>
 </html>
