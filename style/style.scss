@@ -10,12 +10,12 @@
 $basic-radius: 1.15em;
 
 $dark: rgb(15,19,34);
-$lightblue: #7BD3EA;
-$lightgreen: #B9EDDD;
+$lightblue: rgb(123,211,234);
+$lightgreen: rgb(185,237,221);
 $purple: rgb(184,191,255);
 $greenblue: rgb(141,223,203);
-$lightyellow: rgb(247, 249, 127);
-$lightred: #ffc1c1;
+$lightyellow: rgb(247,249,127);
+$lightred: rgb(255,193,193);
 
 //General
 html {
@@ -23,19 +23,16 @@ html {
 }
 
 body {
-    //background-color: #000;
     margin: 0;
     padding: 0.5em 1.875em;
     font-family: 'Montserrat';
     font-size: 1em;   
     filter: blur(0.03em);
-    //transition: all 0.3s ease;
 }
 
 .container {
     margin: 0 auto;
     max-width: 91em;
-    //transform: skew(1deg);
 }
 
 a {
@@ -54,31 +51,6 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    //font-size: 0.875em;
-}
-
-.nav-menu {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    align-items: center;font-family: 'Quicksand';
-    font-weight: 700;
-}
-
-.tab {
-    cursor: pointer;
-    padding: 1em 2.4em;
-    margin-left: 0.625em;
-    display: inline-block;
-    border-radius: $basic-radius $basic-radius 0em 0em;
-}
-
-#one-tab {
-    & span {
-        background-color: $lightyellow;
-        padding: 0.5em 0.9375em;
-        border-radius: 1.5625em;
-    }
 }
 
 .logo-and-name {
@@ -115,7 +87,6 @@ header {
     text-align: center;
     border-radius: $basic-radius $basic-radius 0 0;
     padding: 1em 2.5em;
-    //clip-path: polygon(23% 0, 100% 0, 100% 100%, 0% 100%);
     & a {
         background-color: $lightyellow;
         padding: 0.5em 1.5em;
@@ -125,41 +96,25 @@ header {
 
 //Panel
 
-
-/*
-.panels {
-    //width: 100%;
-    //font-family: 'Montserrat';
-}*/
-
-.panel {
+.short-info {
     background: $lightblue;
-    //display: none;
-    //min-height: 31.375em;
+    display: flex;
+    justify-content: space-between;
+    gap: 10em; 
     padding: 1.875em 3.125em; 
-    border-radius: $basic-radius; 
-}
-
-#one-panel {
     border-radius: $basic-radius 0 $basic-radius $basic-radius;
 }
 
-.home {
-    display: flex;
-    justify-content: space-between;
-    gap: 10em;
-}
 
 .introduction {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    &> h3 {
+    & > h3 {
         margin: 0;
         font-size: 3.5em;
         font-weight: 600;
-        //letter-spacing: 0.03em;
-        &> span {
+        & > span {
             color: $lightyellow;
         }
     }
@@ -168,7 +123,7 @@ header {
 .cv {
     display: flex;
     align-items: center;
-    &> a {
+    & > a {
         position: relative;
         top: 0;
         max-width: fit-content;
@@ -184,7 +139,7 @@ header {
             text-decoration: underline;    
         }
     }
-    &> .parrot{
+    & > .parrot{
         height: 3em;
         margin-left: 1em;
         filter: blur(0);
@@ -211,13 +166,6 @@ header {
     }
 }
 
-.panel-title {
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-
-
 //Portfolio
 
 .portfolio {
@@ -243,7 +191,7 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.2em;
-    &> a {
+    & > a {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -314,7 +262,7 @@ header {
 
     .my-projects  {
         & h2 {
-        font-size: 4.2em;
+            font-size: 4.2em;
         }
     }
 }
@@ -351,7 +299,7 @@ header {
         font-size: 0.7em;
     }
 
-    .panel {
+    .short-info {
         padding: 1.5em 2.5em;
     }
 
@@ -363,16 +311,22 @@ header {
 @media screen and (max-width: 800px) {
     body {
         font-size: 0.65em;
-        filter: blur(0);
+    }
+
+    .my-projects {
+        & h2 {
+            font-size: 4em;
+        }
     }
 }
 
 @media screen and (max-width: 700px) {
     body {
         font-size: 0.575em;
+        filter: blur(0);
     }
 
-    .home {
+    .short-info {
         gap: 5em;
     }
 }
@@ -381,11 +335,30 @@ header {
     body {
         font-size: 0.5em;
     }
+
+    .about-projects > a {
+        & > h5 {
+            font-size: 3em;
+        }
+        
+    }
 }
 
 @media screen and (max-width: 500px) {
     body {
         font-size: 0.425em;
+    }
+
+    .navigation-buttons {
+        display: flex;
+        gap: 2em;
+        margin-left: 5em;
+    }
+
+    .my-projects  {
+        & h2 {
+            font-size: 3.2em;
+        }
     }
 }
 
@@ -394,12 +367,12 @@ header {
         font-size: 0.4em;
     }
 
-    .panel {
+    .short-info {
         padding: 1em 1.5em;
-    }
-
-    .home {
         gap: 3em;
     }
 
+    .introduction > h3 {
+        font-size: 2.6em;
+    }
 }

@@ -33,29 +33,6 @@ header {
   justify-content: space-between;
 }
 
-.nav-menu {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  align-items: center;
-  font-family: "Quicksand";
-  font-weight: 700;
-}
-
-.tab {
-  cursor: pointer;
-  padding: 1em 2.4em;
-  margin-left: 0.625em;
-  display: inline-block;
-  border-radius: 1.15em 1.15em 0em 0em;
-}
-
-#one-tab span {
-  background-color: rgb(247, 249, 127);
-  padding: 0.5em 0.9375em;
-  border-radius: 1.5625em;
-}
-
 .logo-and-name {
   display: flex;
   align-items: center;
@@ -86,7 +63,7 @@ header {
 }
 
 .contact {
-  background-color: #7BD3EA;
+  background-color: rgb(123, 211, 234);
   text-align: center;
   border-radius: 1.15em 1.15em 0 0;
   padding: 1em 2.5em;
@@ -97,25 +74,13 @@ header {
   border-radius: 1.15em;
 }
 
-/*
-.panels {
-    //width: 100%;
-    //font-family: 'Montserrat';
-}*/
-.panel {
-  background: #7BD3EA;
-  padding: 1.875em 3.125em;
-  border-radius: 1.15em;
-}
-
-#one-panel {
-  border-radius: 1.15em 0 1.15em 1.15em;
-}
-
-.home {
+.short-info {
+  background: rgb(123, 211, 234);
   display: flex;
   justify-content: space-between;
   gap: 10em;
+  padding: 1.875em 3.125em;
+  border-radius: 1.15em 0 1.15em 1.15em;
 }
 
 .introduction {
@@ -179,11 +144,6 @@ header {
   scale: 1.05;
 }
 
-.panel-title {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
 .portfolio {
   font-family: "Montserrat";
   display: grid;
@@ -197,7 +157,7 @@ header {
   font-weight: 600;
 }
 .my-projects span {
-  color: #7BD3EA;
+  color: rgb(123, 211, 234);
 }
 
 .about-projects {
@@ -215,7 +175,7 @@ header {
   text-decoration: none;
 }
 .about-projects > a:nth-child(1) {
-  background-color: #ffc1c1;
+  background-color: rgb(255, 193, 193);
 }
 .about-projects > a:nth-child(2) {
   background-color: rgb(184, 191, 255);
@@ -232,7 +192,7 @@ header {
 }
 
 #three {
-  background-color: #B9EDDD;
+  background-color: rgb(185, 237, 221);
   margin-top: 1.2em;
   border-radius: 1.15em;
 }
@@ -287,7 +247,7 @@ header {
     padding: 0.5 1em;
     font-size: 0.7em;
   }
-  .panel {
+  .short-info {
     padding: 1.5em 2.5em;
   }
   .introduction > h3 {
@@ -297,14 +257,17 @@ header {
 @media screen and (max-width: 800px) {
   body {
     font-size: 0.65em;
-    filter: blur(0);
+  }
+  .my-projects h2 {
+    font-size: 4em;
   }
 }
 @media screen and (max-width: 700px) {
   body {
     font-size: 0.575em;
+    filter: blur(0);
   }
-  .home {
+  .short-info {
     gap: 5em;
   }
 }
@@ -312,20 +275,32 @@ header {
   body {
     font-size: 0.5em;
   }
+  .about-projects > a > h5 {
+    font-size: 3em;
+  }
 }
 @media screen and (max-width: 500px) {
   body {
     font-size: 0.425em;
+  }
+  .navigation-buttons {
+    display: flex;
+    gap: 2em;
+    margin-left: 5em;
+  }
+  .my-projects h2 {
+    font-size: 3.2em;
   }
 }
 @media screen and (max-width: 400px) {
   body {
     font-size: 0.4em;
   }
-  .panel {
+  .short-info {
     padding: 1em 1.5em;
-  }
-  .home {
     gap: 3em;
+  }
+  .introduction > h3 {
+    font-size: 2.6em;
   }
 }/*# sourceMappingURL=style.css.map */
