@@ -161,19 +161,22 @@ header {
 
 .profile-picture {
   background-color: rgb(247, 249, 127);
+  margin: 1.5625em auto;
+  overflow: hidden;
+  border: 0.3em solid rgb(247, 249, 127);
+  border-radius: 10em;
+}
+.profile-picture > div {
   background-image: url(../img/viktorio.png);
   background-size: 115%;
   background-position: center 0.625em;
   background-repeat: no-repeat;
   width: 16em;
   height: 24em;
-  margin: 1.5625em auto;
-  border: 0.3em solid rgb(247, 249, 127);
-  border-radius: 10em;
   transition: all 0.3s ease;
 }
-.profile-picture:hover {
-  border-radius: 3em;
+.profile-picture > div:hover {
+  scale: 1.05;
 }
 
 .panel-title {
@@ -251,7 +254,7 @@ header {
   .introduction > h3 {
     font-size: 3.6em;
   }
-  .profile-picture {
+  .profile-picture > div {
     width: 14em;
     height: 22em;
   }
@@ -274,7 +277,7 @@ header {
     padding: 0.5em 1.35em;
     font-size: 0.75em;
   }
-  .profile-picture {
+  .profile-picture > div {
     width: 12em;
     height: 19em;
   }
@@ -294,7 +297,7 @@ header {
 @media screen and (max-width: 800px) {
   body {
     font-size: 0.65em;
-    filter: blur(0.015em);
+    filter: blur(0.005em);
   }
 }
 @media screen and (max-width: 700px) {

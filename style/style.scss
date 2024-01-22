@@ -191,20 +191,23 @@ header {
     }
 }
 
-.profile-picture {
+.profile-picture {    
     background-color: $lightyellow;
-    background-image: url(../img/viktorio.png);
-    background-size: 115%;
-    background-position: center 0.625em;
-    background-repeat: no-repeat;
-    width: 16em;
-    height: 24em;
     margin: 1.5625em auto;
+    overflow: hidden;
     border: 0.3em solid $lightyellow;
     border-radius: 10em;
-    transition: all 0.3s ease;
-    &:hover {
-        border-radius: 3em;
+    & > div{         
+        background-image: url(../img/viktorio.png);
+        background-size: 115%;
+        background-position: center 0.625em;
+        background-repeat: no-repeat;
+        width: 16em;
+        height: 24em;      
+        transition: all 0.3s ease;
+        &:hover {
+            scale: 1.05;
+        }
     }
 }
 
@@ -303,8 +306,10 @@ header {
     }
 
     .profile-picture {
-        width: 14em;
-        height: 22em;
+        & > div {
+            width: 14em;
+            height: 22em;
+        }
     }
 
     .my-projects  {
@@ -333,8 +338,10 @@ header {
     }
 
     .profile-picture {
-        width: 12em;
-        height: 19em;
+        & > div {
+            width: 12em;
+            height: 19em;
+        }
     }
 }
 
@@ -356,7 +363,7 @@ header {
 @media screen and (max-width: 800px) {
     body {
         font-size: 0.65em;
-        filter: blur(0.015em);
+        filter: blur(0.005em);
     }
 }
 
