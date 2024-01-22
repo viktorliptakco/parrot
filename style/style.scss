@@ -1,378 +1,40 @@
-
-//Imports
-
+//Fonts
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800;900&display=swap');
 
 //Variables
-
-$basic-radius: 1.15em;
-
-$dark: rgb(15,19,34);
-$lightblue: rgb(123,211,234);
-$lightgreen: rgb(185,237,221);
-$purple: rgb(184,191,255);
-$greenblue: rgb(141,223,203);
-$lightyellow: rgb(247,249,127);
-$lightred: rgb(255,193,193);
+@import './partials/variables';
 
 //General
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    padding: 0.5em 1.875em;
-    font-family: 'Montserrat';
-    font-size: 1em;   
-    filter: blur(0.03em);
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 91em;
-}
-
-a {
-    position: relative;
-    top: 0;
-    text-decoration: none;
-    color: #000;
-    transition: all 0.15s ease;
-    &:hover {
-        top: 0.25em;  
-    }
-}
+@import './partials/general';
 
 //Header
+@import './partials/header';
 
-header {
-    display: flex;
-    justify-content: space-between;
-}
+//Introduction
+@import './partials/introduction';
 
-.logo-and-name {
-    display: flex;
-    align-items: center;
-    font-size: 1.2em;
-    font-weight: 700;
-    & .logo {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: center;
-        height: 1.5em;
-        width: 1.5em;
-        margin-right: 0.5em;
-        border-radius: 1.5em;
-        background-color: #000;
-        color: white;
-    }
-}
-
-.navigation-buttons {
-    display: flex;
-    gap: 4em;
-    margin-left: 10em;
-    font-weight: 600;
-    & > a {
-        padding: 1em;
-    }
-}
-
-.contact {
-    background-color: $lightblue;
-    text-align: center;
-    border-radius: $basic-radius $basic-radius 0 0;
-    padding: 1em 2.5em;
-    & a {
-        background-color: $lightyellow;
-        padding: 0.5em 1.5em;
-        border-radius: $basic-radius;
-    }
-}
-
-//Panel
-
-.short-info {
-    background: $lightblue;
-    display: flex;
-    justify-content: space-between;
-    gap: 10em; 
-    padding: 1.875em 3.125em; 
-    border-radius: $basic-radius 0 $basic-radius $basic-radius;
-}
-
-
-.introduction {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    & > h3 {
-        margin: 0;
-        font-size: 3.5em;
-        font-weight: 600;
-        & > span {
-            color: $lightyellow;
-        }
-    }
-}
-
-.cv {
-    display: flex;
-    align-items: center;
-    & > a {
-        position: relative;
-        top: 0;
-        max-width: fit-content;
-        background-color: $lightyellow;
-        color: #000;
-        font-size: 1em;
-        padding: 0.95em 1.325em;
-        border-radius: 1.5625em;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        &:hover {
-            top: 0.1875em;   
-            text-decoration: underline;    
-        }
-    }
-    & > .parrot{
-        height: 3em;
-        margin-left: 1em;
-        filter: blur(0);
-    }
-}
-
-.profile-picture {    
-    background-color: $lightyellow;
-    margin: 1.5625em auto;
-    overflow: hidden;
-    border: 0.3em solid $lightyellow;
-    border-radius: 10em;
-    & > div{         
-        background-image: url(../img/viktorio.png);
-        background-size: 115%;
-        background-position: center 0.625em;
-        background-repeat: no-repeat;
-        width: 16em;
-        height: 24em;      
-        transition: all 0.3s ease;
-        &:hover {
-            scale: 1.05;
-        }
-    }
-}
-
-//Portfolio
-
-.portfolio {
-    font-family: "Montserrat";
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-content: space-between;
-    margin-top: 1.2em;
-}
-
-.my-projects {
-    & h2 {
-        //margin: 0.5em 0; 
-        font-size: 4.5em;
-        font-weight: 600;
-    }
-    & span {
-        color: $lightblue;
-    }
-}
-
-.about-projects {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2em;
-    & > a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        //min-width: 22.5em;
-        //min-height: 22.5em;
-        border-radius: $basic-radius;
-        color: #000;
-        text-decoration: none;
-        &:nth-child(1) {
-            background-color: $lightred;
-        }
-        &:nth-child(2) {
-            background-color: $purple;
-        }
-        &> h5 {
-            margin: 0.2em;
-            font-size: 3.5em;
-            font-weight: 500;
-        }
-        &> p {
-            margin: 0;
-            font-size: 4em;
-            font-weight: 700;
-        }
-    }
-}
+//Education
+@import './partials/education';
 
 // pracovna verzia- upravit
-#three {
-    background-color: $lightgreen;
-    //min-height: 50vh;
+
+#courses {
+    //background-color: $lightgreen;
+    display: flex;
     margin-top: 1.2em;
-    //padding: 2em;
     border-radius: $basic-radius;
-    //clip-path: polygon(50% 0, 50% 50%, 100% 50%, 100% 100%, 0 100%, 0 0);
-    & > div {
-        float: left;
-        margin: 1em;
+}
+
+.big-parrot {
+    background-color: $lightgreen;
+    padding: 2em;
+    border-radius: $basic-radius;
+    & > img {
         background-color: $lightyellow;
-        border-radius: $basic-radius;
-        //height: 2em;
-    }
-    & img {
         height: 10em;
-    }
-    & p {
-        //display: inline;
-        //background-color: #b5b5b5;
         padding: 1em;
-        margin: 0;
-    }
-}
-
-//Media queries
-
-@media screen and (max-width: 1350px) {
-    .introduction > h3 {
-        font-size: 3.6em;
-    }
-
-    .profile-picture {
-        & > div {
-            width: 14em;
-            height: 22em;
-        }
-    }
-
-    .my-projects  {
-        & h2 {
-            font-size: 4.2em;
-        }
-    }
-}
-
-@media screen and (max-width: 1200px) {
-    body {
-        font-size: 0.9em;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    body {
-        font-size: 0.8em;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    body {
-        padding: 0.5em 1.35em;
-        font-size: 0.75em;
-    }
-
-    .profile-picture {
-        & > div {
-            width: 12em;
-            height: 19em;
-        }
-    }
-}
-
-@media screen and (max-width: 900px) {
-    body {
-        padding: 0.5 1em;
-        font-size: 0.7em;
-    }
-
-    .short-info {
-        padding: 1.5em 2.5em;
-    }
-
-    .introduction > h3 {
-        font-size: 3.2em;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    body {
-        font-size: 0.65em;
-    }
-
-    .my-projects {
-        & h2 {
-            font-size: 4em;
-        }
-    }
-}
-
-@media screen and (max-width: 700px) {
-    body {
-        font-size: 0.575em;
-        filter: blur(0);
-    }
-
-    .short-info {
-        gap: 5em;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 0.5em;
-    }
-
-    .about-projects > a {
-        & > h5 {
-            font-size: 3em;
-        }
-        
-    }
-}
-
-@media screen and (max-width: 500px) {
-    body {
-        font-size: 0.425em;
-    }
-
-    .navigation-buttons {
-        display: flex;
-        gap: 2em;
-        margin-left: 5em;
-    }
-
-    .my-projects  {
-        & h2 {
-            font-size: 3.2em;
-        }
-    }
-}
-
-@media screen and (max-width: 400px) {
-    body {
-        font-size: 0.4em;
-    }
-
-    .short-info {
-        padding: 1em 1.5em;
-        gap: 3em;
-    }
-
-    .introduction > h3 {
-        font-size: 2.6em;
+        border-radius: 50%;
     }
 }

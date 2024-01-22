@@ -1,0 +1,120 @@
+
+#introduction {
+    background: $lightblue;
+    display: flex;
+    justify-content: space-between;
+    gap: 10em; 
+    padding: 1.875em 3.125em; 
+    border-radius: $basic-radius 0 $basic-radius $basic-radius;
+}
+
+.short-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    & > h3 {
+        margin: 0;
+        font-size: 3.5em;
+        font-weight: 600;
+        & > span {
+            color: $lightyellow;
+        }
+    }
+}
+
+.download-cv {
+    display: flex;
+    align-items: center;
+    & > a {
+        position: relative;
+        top: 0;
+        max-width: fit-content;
+        background-color: $lightyellow;
+        color: #000;
+        font-size: 1em;
+        padding: 0.95em 1.325em;
+        border-radius: 1.5625em;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+            top: 0.1875em;   
+            text-decoration: underline;    
+        }
+    }
+    & > .small-parrot{
+        height: 3em;
+        margin-left: 1em;
+        filter: blur(0);
+    }
+}
+
+.profile-picture {    
+    background-color: $lightyellow;
+    margin: 1.5625em auto;
+    overflow: hidden;
+    border: 0.3em solid $lightyellow;
+    border-radius: 10em;
+    & > div{         
+        background-image: url(../img/viktorio.png);
+        background-size: 115%;
+        background-position: center 0.625em;
+        background-repeat: no-repeat;
+        width: 16em;
+        height: 24em;      
+        transition: all 0.3s ease;
+        &:hover {
+            scale: 1.05;
+        }
+    }
+}
+
+//Media
+
+@media screen and (max-width: 1350px) {
+    .short-info > h3 {
+        font-size: 3.6em;
+    }
+
+    .profile-picture {
+        & > div {
+            width: 14em;
+            height: 22em;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .profile-picture {
+        & > div {
+            width: 12em;
+            height: 19em;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #introduction {
+        padding: 1.5em 2.5em;
+    }
+
+    .short-info > h3 {
+        font-size: 3.2em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #introduction {
+        gap: 5em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #introduction {
+        padding: 1em 1.5em;
+        gap: 3em;
+    }
+
+    .short-info > h3 {
+        font-size: 2.6em;
+    }
+}
