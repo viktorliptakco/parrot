@@ -24,6 +24,7 @@
     //background-color: $lightgreen;
     display: flex;
     margin-top: 1.2em;
+    padding: 0 2em;
     border-radius: $basic-radius;
 }
 
@@ -33,8 +34,18 @@
     border-radius: $basic-radius;
     & > img {
         background-color: $lightyellow;
-        height: 10em;
+        height: 13em;
         padding: 1em;
         border-radius: 50%;
+    }
+}
+
+.skillmea {
+    & > div {
+        background-color: $lightgreen;
+        font-size: 2em;
+        margin: 1em;
+        padding: 0.5em;
+        border-radius: $basic-radius/2;
     }
 }
