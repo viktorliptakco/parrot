@@ -3,49 +3,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800;900&display=swap');
 
-//Variables
+//Partials
 @import './partials/variables';
-
-//General
 @import './partials/general';
-
-//Header
 @import './partials/header';
-
-//Introduction
 @import './partials/introduction';
-
-//Education
 @import './partials/education';
-
-// pracovna verzia- upravit
-
-#courses {
-    //background-color: $lightgreen;
-    display: flex;
-    margin-top: 1.2em;
-    padding: 0 2em;
-    border-radius: $basic-radius;
-}
-
-.big-parrot {
-    background-color: $lightgreen;
-    padding: 2em;
-    border-radius: $basic-radius;
-    & > img {
-        background-color: $lightyellow;
-        height: 13em;
-        padding: 1em;
-        border-radius: 50%;
-    }
-}
-
-.skillmea {
-    & > div {
-        background-color: $lightgreen;
-        font-size: 2em;
-        margin: 1em;
-        padding: 0.5em;
-        border-radius: $basic-radius/2;
-    }
-}
+@import './partials/courses';

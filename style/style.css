@@ -14,7 +14,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 91em;
+  max-width: 1200px;
 }
 
 a {
@@ -132,7 +132,6 @@ header {
   background: rgb(123, 211, 234);
   display: flex;
   justify-content: space-between;
-  gap: 10em;
   border-radius: 1.15em 0 1.15em 1.15em;
 }
 
@@ -144,7 +143,7 @@ header {
 }
 .short-info > h3 {
   margin: 0;
-  font-size: 3.5em;
+  font-size: 3.6em;
   font-weight: 600;
 }
 .short-info > h3 > span {
@@ -175,7 +174,6 @@ header {
 .download-cv > .small-parrot {
   height: 3em;
   margin-left: 1em;
-  filter: blur(0);
 }
 
 .profile-picture {
@@ -191,45 +189,22 @@ header {
   background-position: center 0.625em;
   background-repeat: no-repeat;
   width: 16em;
-  height: 24em;
+  height: 26em;
   transition: all 0.3s ease;
 }
 .profile-picture > div:hover {
   scale: 1.05;
 }
 
-@media screen and (max-width: 1350px) {
-  .short-info > h3 {
-    font-size: 3.6em;
-  }
-  .profile-picture > div {
-    width: 14em;
-    height: 22em;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .profile-picture > div {
-    width: 12em;
-    height: 19em;
-  }
-}
-@media screen and (max-width: 900px) {
-  .short-info {
-    padding: 1.5em 2.5em;
-  }
-  .short-info > h3 {
-    font-size: 3.2em;
-  }
-}
-@media screen and (max-width: 700px) {
-  #introduction {
-    gap: 5em;
-  }
-}
+/*@media screen and (max-width: 900px) {
+    .short-info {
+        padding: 1.5em 2.5em;
+        & > h3 {
+        font-size: 3.2em;
+        }
+    }
+}*/
 @media screen and (max-width: 400px) {
-  #introduction {
-    gap: 3em;
-  }
   .short-info {
     padding: 1em 1.5em;
   }
@@ -247,6 +222,9 @@ header {
   border-bottom: 1px solid rgb(221, 221, 221);
 }
 
+.my-projects {
+  text-align: center;
+}
 .my-projects h2 {
   font-size: 4.5em;
   font-weight: 600;
@@ -308,13 +286,14 @@ header {
 }
 #courses {
   display: flex;
+  justify-content: center;
+  gap: 2em;
   margin-top: 1.2em;
-  padding: 0 2em;
   border-radius: 1.15em;
 }
 
 .big-parrot {
-  background-color: rgb(185, 237, 221);
+  background-color: rgb(141, 223, 203);
   padding: 2em;
   border-radius: 1.15em;
 }
@@ -325,10 +304,15 @@ header {
   border-radius: 50%;
 }
 
-.skillmea > div {
-  background-color: rgb(185, 237, 221);
+.skillmea > h5 {
+  text-align: center;
   font-size: 2em;
-  margin: 1em;
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 0 0.575em 0.575em 0;
+}
+.skillmea > div {
+  font-size: 1.5em;
   padding: 0.5em;
   border-radius: 0.575em;
 }/*# sourceMappingURL=style.css.map */

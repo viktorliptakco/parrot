@@ -1,0 +1,40 @@
+
+#courses {
+    //background-color: $lightgreen;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 1.2em;
+    //padding: 0 2em;
+    border-radius: $basic-radius;
+}
+
+.big-parrot {
+    background-color: $greenblue;
+    padding: 2em;
+    border-radius: $basic-radius;
+    & > img {
+        background-color: $lightyellow;
+        height: 13em;
+        padding: 1em;
+        border-radius: 50%;
+    }
+}
+
+.skillmea {
+    //font-size: 2em;
+    & > h5 {
+        //background-color: $greenblue;
+        text-align: center;
+        font-size: 2em;
+        margin: 0;
+        padding: 0.5em;
+        border-radius: 0 $basic-radius/2 $basic-radius/2 0;
+    }
+    & > div {
+        //background-color: $lightgreen;
+        font-size: 1.5em;
+        padding: 0.5em;
+        border-radius: $basic-radius/2;
+    }
+}

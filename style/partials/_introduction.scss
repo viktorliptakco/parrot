@@ -3,7 +3,7 @@
     background: $lightblue;
     display: flex;
     justify-content: space-between;
-    gap: 10em;
+    //gap: 10em;
     border-radius: $basic-radius 0 $basic-radius $basic-radius;
 }
 
@@ -14,7 +14,7 @@
     padding: 1.875em 3.125em; 
     & > h3 {
         margin: 0;
-        font-size: 3.5em;
+        font-size: 3.6em;
         font-weight: 600;
         & > span {
             color: $lightyellow;
@@ -25,6 +25,7 @@
 .download-cv {
     display: flex;
     align-items: center;
+    //margin-bottom: 2em;
     & > a {
         position: relative;
         top: 0;
@@ -44,7 +45,7 @@
     & > .small-parrot{
         height: 3em;
         margin-left: 1em;
-        filter: blur(0);
+        //filter: blur(0);
     }
 }
 
@@ -60,7 +61,7 @@
         background-position: center 0.625em;
         background-repeat: no-repeat;
         width: 16em;
-        height: 24em;      
+        height: 26em;
         transition: all 0.3s ease;
         &:hover {
             scale: 1.05;
@@ -69,49 +70,16 @@
 }
 
 //Media
-
-@media screen and (max-width: 1350px) {
-    .short-info > h3 {
-        font-size: 3.6em;
-    }
-
-    .profile-picture {
-        & > div {
-            width: 14em;
-            height: 22em;
-        }
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .profile-picture {
-        & > div {
-            width: 12em;
-            height: 19em;
-        }
-    }
-}
-
-@media screen and (max-width: 900px) {
+/*@media screen and (max-width: 900px) {
     .short-info {
         padding: 1.5em 2.5em;
         & > h3 {
         font-size: 3.2em;
         }
     }
-}
-
-@media screen and (max-width: 700px) {
-    #introduction {
-        gap: 5em;
-    }
-}
+}*/
 
 @media screen and (max-width: 400px) {
-    #introduction {
-        gap: 3em;
-    }
-
     .short-info {
         padding: 1em 1.5em;
         & > h3 {
