@@ -28,7 +28,7 @@
     //margin-bottom: 2em;
     & > a {
         position: relative;
-        top: 0;
+        //top: 0;
         max-width: fit-content;
         background-color: $lightyellow;
         color: #000;
@@ -38,7 +38,7 @@
         text-decoration: none;
         transition: all 0.3s ease;
         &:hover {
-            top: 0.1875em;   
+            //top: 0.1875em;   
             text-decoration: underline;    
         }
     }
@@ -60,8 +60,8 @@
         background-size: 115%;
         background-position: center 0.625em;
         background-repeat: no-repeat;
-        width: 16em;
-        height: 26em;
+        width: 14em;
+        height: 22em;
         transition: all 0.3s ease;
         &:hover {
             scale: 1.05;

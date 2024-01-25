@@ -25,7 +25,7 @@ a {
   transition: all 0.15s ease;
 }
 a:hover {
-  top: 0.25em;
+  top: -0.25em;
 }
 
 @media screen and (max-width: 1200px) {
@@ -110,6 +110,25 @@ header {
   padding: 1em;
 }
 
+.head {
+  display: flex;
+}
+
+.corner {
+  position: relative;
+  left: 0.1em;
+  top: 0.1em;
+  width: 1em;
+  background-color: white;
+  -webkit-clip-path: polygon(100% 20%, 10% 100%, 100% 100%);
+          clip-path: polygon(100% 20%, 10% 100%, 100% 100%);
+}
+.corner > div {
+  background-color: rgb(123, 211, 234);
+  width: 100%;
+  height: 100%;
+}
+
 .contact {
   background-color: rgb(123, 211, 234);
   text-align: center;
@@ -120,6 +139,12 @@ header {
   background-color: rgb(247, 249, 127);
   padding: 0.5em 1.5em;
   border-radius: 1.15em;
+}
+
+.round-corner {
+  background-color: #000;
+  width: 2em;
+  height: 2em;
 }
 
 @media screen and (max-width: 500px) {
@@ -156,7 +181,6 @@ header {
 }
 .download-cv > a {
   position: relative;
-  top: 0;
   max-width: -moz-fit-content;
   max-width: fit-content;
   background-color: rgb(247, 249, 127);
@@ -168,7 +192,6 @@ header {
   transition: all 0.3s ease;
 }
 .download-cv > a:hover {
-  top: 0.1875em;
   text-decoration: underline;
 }
 .download-cv > .small-parrot {
@@ -188,8 +211,8 @@ header {
   background-size: 115%;
   background-position: center 0.625em;
   background-repeat: no-repeat;
-  width: 16em;
-  height: 26em;
+  width: 14em;
+  height: 22em;
   transition: all 0.3s ease;
 }
 .profile-picture > div:hover {
@@ -315,4 +338,24 @@ header {
   font-size: 1.5em;
   padding: 0.5em;
   border-radius: 0.575em;
+}
+
+#about-me {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.2em;
+  margin-bottom: 50em;
+}
+
+.bottom-profile-picture {
+  background-color: rgb(185, 237, 221);
+  padding: 1em;
+  border-radius: 1.15em;
+  -webkit-clip-path: polygon(70% 0, 73% 8%, 100% 8%, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(70% 0, 73% 8%, 100% 8%, 100% 100%, 0 100%, 0 0);
+}
+.bottom-profile-picture > img {
+  background-color: rgb(247, 249, 127);
+  height: 14em;
+  border-radius: 14em;
 }/*# sourceMappingURL=style.css.map */
