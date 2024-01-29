@@ -51,33 +51,26 @@
 
 .profile-picture {    
     background-color: $lightyellow;
-    margin: 1.5625em auto;
+    margin: 1.5em auto;
     overflow: hidden;
-    border: 0.3em solid $lightyellow;
-    border-radius: 10em;
-    & > div{         
-        background-image: url(../img/viktorio.png);
-        background-size: 115%;
-        background-position: center 0.625em;
+    border: 0.25em solid $lightyellow;
+    border-radius: 15em;
+    & > img {         
+        //background-image: url(../img/viktorio.png);
+        //background-size: 115%;
+        //background-position: center 0.625em;
         background-repeat: no-repeat;
-        width: 14em;
-        height: 22em;
+        //width: 14em;
+        height: 22.8em;
+        scale: 1.05;
         transition: all 0.3s ease;
         &:hover {
-            scale: 1.05;
+            scale: 1.075;
         }
     }
 }
 
 //Media
-/*@media screen and (max-width: 900px) {
-    .short-info {
-        padding: 1.5em 2.5em;
-        & > h3 {
-        font-size: 3.2em;
-        }
-    }
-}*/
 
 @media screen and (max-width: 400px) {
     .short-info {

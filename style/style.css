@@ -79,6 +79,10 @@ a:hover {
 header {
   display: flex;
   justify-content: space-between;
+  /*position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;*/
 }
 
 .logo-and-name {
@@ -201,32 +205,21 @@ header {
 
 .profile-picture {
   background-color: rgb(247, 249, 127);
-  margin: 1.5625em auto;
+  margin: 1.5em auto;
   overflow: hidden;
-  border: 0.3em solid rgb(247, 249, 127);
-  border-radius: 10em;
+  border: 0.25em solid rgb(247, 249, 127);
+  border-radius: 15em;
 }
-.profile-picture > div {
-  background-image: url(../img/viktorio.png);
-  background-size: 115%;
-  background-position: center 0.625em;
+.profile-picture > img {
   background-repeat: no-repeat;
-  width: 14em;
-  height: 22em;
+  height: 22.8em;
+  scale: 1.05;
   transition: all 0.3s ease;
 }
-.profile-picture > div:hover {
-  scale: 1.05;
+.profile-picture > img:hover {
+  scale: 1.075;
 }
 
-/*@media screen and (max-width: 900px) {
-    .short-info {
-        padding: 1.5em 2.5em;
-        & > h3 {
-        font-size: 3.2em;
-        }
-    }
-}*/
 @media screen and (max-width: 400px) {
   .short-info {
     padding: 1em 1.5em;
@@ -274,7 +267,7 @@ header {
   background-color: rgb(255, 193, 193);
 }
 .about-projects > a:nth-child(2) {
-  background-color: rgb(184, 191, 255);
+  background-color: rgb(185, 237, 221);
 }
 .about-projects > a > h5 {
   margin: 0.2em;
@@ -308,54 +301,149 @@ header {
   }
 }
 #courses {
+  padding-top: 1.2em;
+}
+
+.course-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  transition: all 0.3s ease;
+}
+.course-box > div {
   display: flex;
   justify-content: center;
-  gap: 2em;
-  margin-top: 1.2em;
-  border-radius: 1.15em;
+  align-items: center;
 }
-
-.big-parrot {
-  background-color: rgb(141, 223, 203);
-  padding: 2em;
-  border-radius: 1.15em;
-}
-.big-parrot > img {
-  background-color: rgb(247, 249, 127);
-  height: 13em;
-  padding: 1em;
-  border-radius: 50%;
-}
-
-.skillmea > h5 {
-  text-align: center;
+.course-box > div > h4 {
   font-size: 2em;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   margin: 0;
-  padding: 0.5em;
-  border-radius: 0 0.575em 0.575em 0;
-}
-.skillmea > div {
-  font-size: 1.5em;
-  padding: 0.5em;
-  border-radius: 0.575em;
 }
 
-#about-me {
+.course-box-item {
+  overflow: hidden;
+  border-radius: 1.5em;
+  padding: 1.25em;
+  background-color: #ececec;
+  overflow: hidden;
+  position: relative;
+}
+
+.course-box-item:hover .item-bg {
+  transform: scale(10.5);
+}
+
+.logo-and-name {
   display: flex;
-  justify-content: center;
-  margin-top: 1.2em;
-  margin-bottom: 50em;
+  position: relative;
+  left: 0;
+  z-index: 2;
+}
+.logo-and-name img {
+  max-width: 15em;
+  height: 5em;
+  border-radius: 0.75em;
+  transform: scale(1);
+}
+.logo-and-name h3 {
+  font-size: 1.2em;
+  margin: 0 0.75em;
 }
 
-.bottom-profile-picture {
-  background-color: rgb(185, 237, 221);
-  padding: 1em;
-  border-radius: 1.15em;
-  -webkit-clip-path: polygon(70% 0, 73% 8%, 100% 8%, 100% 100%, 0 100%, 0 0);
-          clip-path: polygon(70% 0, 73% 8%, 100% 8%, 100% 100%, 0 100%, 0 0);
+.description {
+  display: flex;
+  position: relative;
+  top: 0;
+  margin-top: 1em;
+  font-size: 1em;
+  z-index: 2;
 }
-.bottom-profile-picture > img {
+
+.item-bg {
+  height: 8em;
+  width: 8em;
+  position: absolute;
+  top: -4.6875em;
+  right: -4.6875em;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.webrebel .item-bg {
+  background-color: rgb(123, 211, 234);
+}
+
+.oop .item-bg {
   background-color: rgb(247, 249, 127);
-  height: 14em;
-  border-radius: 14em;
+}
+
+.sass .item-bg {
+  background-color: rgb(172, 179, 239);
+}
+
+.github .item-bg {
+  background-color: rgb(255, 193, 193);
+}
+
+.js-games .item-bg {
+  background-color: rgb(141, 223, 203);
+}
+
+@media screen and (max-width: 700px) {
+  .course-box {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+#about-me {
+  margin-top: 1.2em;
+  border-radius: 1.15em;
+}
+#about-me > h5 {
+  text-align: center;
+  font-size: 2.8em;
+  margin: 0 1em;
+}
+#about-me > p {
+  background-color: rgb(254, 255, 176);
+  padding-left: 0.3em;
+  font-size: 1.5em;
+  border-left: 0.75em solid rgb(172, 179, 239);
+}
+#about-me > p > a {
+  font-weight: 700;
+}
+#about-me > p > a:hover {
+  top: -0.1em;
+}
+
+#hobby {
+  padding-top: 1.2em;
+}
+#hobby > h5 {
+  text-align: center;
+  font-size: 2.8em;
+  margin: 0 1em;
+}
+#hobby > p {
+  background-color: rgb(208, 252, 233);
+  padding-left: 0.3em;
+  font-size: 1.5em;
+  border-left: 0.75em solid rgb(247, 249, 127);
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 3em;
+}
+
+.contact-footer {
+  font-size: 1.25em;
+}
+.contact-footer i {
+  font-style: normal;
+  margin-left: 1em;
 }/*# sourceMappingURL=style.css.map */

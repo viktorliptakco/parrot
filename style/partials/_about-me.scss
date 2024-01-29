@@ -1,20 +1,25 @@
 #about-me {
-    //min-height: 100vh;
-    //background-color: wheat;
-    display: flex;
-    justify-content: center;
     margin-top: 1.2em;
-    margin-bottom: 50em;
-}
-
-.bottom-profile-picture{
-    background-color: $lightgreen;
-    padding: 1em;
     border-radius: $basic-radius;
-    clip-path: polygon(70% 0, 73% 8%, 100% 8%, 100% 100%, 0 100%, 0 0);
-    & > img {
-        background-color: $lightyellow;
-        height: 14em;
-        border-radius: 14em;
+    & > h5 {        
+        text-align: center;
+        font-size: 2.8em;
+        margin: 0 1em;
+    }
+    & > p {
+        background-color: rgb(254, 255, 176);
+        //margin: 1em 2em;
+        padding-left: 0.3em;
+        font-size: 1.5em;
+        border-left: 0.75em solid $purple;
+        & > a {
+            //background-color: $lightred;
+            //padding: 0.1em;
+            //border-radius: 0.5em;
+            font-weight: 700;
+            &:hover {
+                top: -0.1em;
+            }
+        }
     }
 }

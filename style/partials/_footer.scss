@@ -1,0 +1,16 @@
+footer {
+    //background-color: rgb(228, 228, 228);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 3em;
+   
+}
+
+.contact-footer {
+    font-size: 1.25em;
+    & i {
+        font-style: normal;
+        margin-left: 1em;
+    }
+}
