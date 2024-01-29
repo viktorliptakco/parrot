@@ -152,7 +152,7 @@ header {
     font-size: 0.75em;
   }
   .navigation-buttons {
-    gap: 2em;
+    gap: 0.5em;
     margin-left: 2em;
   }
 }
