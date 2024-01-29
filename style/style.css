@@ -326,6 +326,7 @@ header {
   background-color: #ececec;
   overflow: hidden;
   position: relative;
+  z-index: 3;
 }
 
 .course-box-item:hover .item-bg {
@@ -366,7 +367,7 @@ header {
   right: -4.6875em;
   border-radius: 50%;
   transition: all 0.3s ease;
-  z-index: -1;
+  z-index: 0;
 }
 
 .webrebel .item-bg {
@@ -418,6 +419,7 @@ header {
 
 #hobby {
   padding-top: 1.2em;
+  margin-bottom: 8em;
 }
 #hobby > h5 {
   text-align: center;
@@ -426,7 +428,7 @@ header {
 }
 #hobby > p {
   padding-left: 0.3em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   border-left: 0.75em solid rgb(247, 249, 127);
 }
 
