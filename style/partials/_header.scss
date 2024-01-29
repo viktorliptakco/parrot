@@ -77,9 +77,13 @@ header {
 
 //Media 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
+    header {
+        font-size: 0.75em;
+    }
+
     .navigation-buttons {
         gap: 2em;
-        margin-left: 5em;
+        margin-left: 2em;
     }
 }
