@@ -1,5 +1,6 @@
 #about-me {
     margin-top: 1.2em;
+    margin-bottom: 8em;
     border-radius: $basic-radius;
     & > h5 {        
         text-align: center;
@@ -7,10 +8,10 @@
         margin: 0 1em;
     }
     & > p {
-        background-color: rgb(254, 255, 176);
+        //background-color: rgb(254, 255, 176);
         //margin: 1em 2em;
         padding-left: 0.3em;
-        font-size: 1.5em;
+        font-size: 1.2em;
         border-left: 0.75em solid $purple;
         & > a {
             //background-color: $lightred;

@@ -14,7 +14,7 @@
     padding: 1.875em 3.125em; 
     & > h3 {
         margin: 0;
-        font-size: 3.6em;
+        font-size: 3em;
         font-weight: 600;
         & > span {
             color: $lightyellow;
@@ -56,12 +56,7 @@
     border: 0.25em solid $lightyellow;
     border-radius: 15em;
     & > img {         
-        //background-image: url(../img/viktorio.png);
-        //background-size: 115%;
-        //background-position: center 0.625em;
-        background-repeat: no-repeat;
-        //width: 14em;
-        height: 22.8em;
+        height: 20em;
         scale: 1.05;
         transition: all 0.3s ease;
         &:hover {

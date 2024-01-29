@@ -13,8 +13,9 @@
     text-align: center;
     & h2 {
         //margin: 0.5em 0; 
-        font-size: 4.5em;
+        font-size: 3.2em;
         font-weight: 600;
+        margin: 0.5em 0;
     }
     & span {
         color: $lightblue;
@@ -43,12 +44,12 @@
         }
         &> h5 {
             margin: 0.2em;
-            font-size: 3.5em;
+            font-size: 2.5em;
             font-weight: 500;
         }
         &> p {
             margin: 0;
-            font-size: 4em;
+            font-size: 3em;
             font-weight: 700;
         }
     }

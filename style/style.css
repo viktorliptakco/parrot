@@ -9,12 +9,12 @@ body {
   padding: 0.5em 1.875em;
   font-family: "Montserrat";
   font-size: 1em;
-  filter: blur(0.03em);
+  filter: blur(0.02em);
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1000px;
 }
 
 a {
@@ -79,16 +79,12 @@ a:hover {
 header {
   display: flex;
   justify-content: space-between;
-  /*position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;*/
+  font-size: 0.9em;
 }
 
 .logo-and-name {
   display: flex;
   align-items: center;
-  font-size: 1.2em;
   font-weight: 700;
 }
 .logo-and-name .logo {
@@ -172,7 +168,7 @@ header {
 }
 .short-info > h3 {
   margin: 0;
-  font-size: 3.6em;
+  font-size: 3em;
   font-weight: 600;
 }
 .short-info > h3 > span {
@@ -211,8 +207,7 @@ header {
   border-radius: 15em;
 }
 .profile-picture > img {
-  background-repeat: no-repeat;
-  height: 22.8em;
+  height: 20em;
   scale: 1.05;
   transition: all 0.3s ease;
 }
@@ -242,8 +237,9 @@ header {
   text-align: center;
 }
 .my-projects h2 {
-  font-size: 4.5em;
+  font-size: 3.2em;
   font-weight: 600;
+  margin: 0.5em 0;
 }
 .my-projects span {
   color: rgb(123, 211, 234);
@@ -271,12 +267,12 @@ header {
 }
 .about-projects > a > h5 {
   margin: 0.2em;
-  font-size: 3.5em;
+  font-size: 2.5em;
   font-weight: 500;
 }
 .about-projects > a > p {
   margin: 0;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 700;
 }
 
@@ -302,6 +298,7 @@ header {
 }
 #courses {
   padding-top: 1.2em;
+  margin-bottom: 8em;
 }
 
 .course-box {
@@ -398,6 +395,7 @@ header {
 }
 #about-me {
   margin-top: 1.2em;
+  margin-bottom: 8em;
   border-radius: 1.15em;
 }
 #about-me > h5 {
@@ -406,9 +404,8 @@ header {
   margin: 0 1em;
 }
 #about-me > p {
-  background-color: rgb(254, 255, 176);
   padding-left: 0.3em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   border-left: 0.75em solid rgb(172, 179, 239);
 }
 #about-me > p > a {
@@ -427,7 +424,6 @@ header {
   margin: 0 1em;
 }
 #hobby > p {
-  background-color: rgb(208, 252, 233);
   padding-left: 0.3em;
   font-size: 1.5em;
   border-left: 0.75em solid rgb(247, 249, 127);
