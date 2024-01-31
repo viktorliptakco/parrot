@@ -1,14 +1,16 @@
 footer {
-    background-color: rgb(242, 242, 242);
+    background-color: $grey;
     display: flex;
-    align-items: center;
     justify-content: flex-end;
     height: 2em;
 }
 
 .contact-footer {
-    font-size: 1.25em;
-    //padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1em;
+    margin: 0 1em;
     & i {
         font-style: normal;
     }
