@@ -102,3 +102,11 @@
     }
 }
 
+@media screen and (max-width: 400px) {
+    .profile-picture {    
+        max-height: 12em;
+        & > img {         
+            height: 12em;
+        }
+    }
+}
