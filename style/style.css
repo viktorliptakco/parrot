@@ -5,8 +5,11 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   margin: 0;
-  padding: 0.5em 1.875em 0 1.875em;
   font-family: "Montserrat";
   font-size: 1em;
   filter: blur(0.02em);
@@ -14,7 +17,14 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1000px;
+  padding: 1em;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: 0.75em;
 }
 
 a {
@@ -28,52 +38,63 @@ a:hover {
   top: -0.25em;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1450px) {
   body {
-    font-size: 0.9em;
+    font-size: 0.95em;
   }
 }
-@media screen and (max-width: 1100px) {
-  body {
-    font-size: 0.8em;
+@media screen and (max-width: 1250px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    max-width: 800px;
   }
 }
+/*@media screen and (max-width: 1100px) {
+    body {
+        font-size: 0.8em;
+    }
+}
+
 @media screen and (max-width: 1000px) {
-  body {
-    padding: 0.5em 1.35em;
-    font-size: 0.75em;
-  }
+    body {
+        //padding: 0.5em 1.35em;
+        font-size: 0.75em;
+    }
 }
+
 @media screen and (max-width: 900px) {
-  body {
-    padding: 0.5 1em;
-    font-size: 0.7em;
-  }
+    body {
+        //padding: 0.5 1em;
+        font-size: 0.7em;
+    }
 }
+
 @media screen and (max-width: 800px) {
-  body {
-    font-size: 0.65em;
-  }
-}
+    body {
+        font-size: 0.65em;
+    }
+}*/
 @media screen and (max-width: 700px) {
   body {
-    font-size: 0.575em;
+    font-size: 0.9em;
     filter: blur(0);
   }
 }
 @media screen and (max-width: 600px) {
   body {
-    font-size: 0.5em;
+    font-size: 0.8em;
   }
 }
 @media screen and (max-width: 500px) {
   body {
-    font-size: 0.425em;
+    font-size: 0.75em;
   }
 }
 @media screen and (max-width: 400px) {
   body {
-    font-size: 0.4em;
+    font-size: 0.7em;
   }
 }
 header {
@@ -158,20 +179,22 @@ header {
 }
 #introduction {
   background: rgb(123, 211, 234);
+  color: #1c1c1c;
   display: flex;
   justify-content: space-between;
-  border-radius: 1.15em 0 1.15em 1.15em;
+  padding: 2em;
+  gap: 2em;
+  border-radius: 1.15em;
 }
 
 .short-info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 1.875em 3.125em;
 }
 .short-info > h3 {
   margin: 0;
-  font-size: 3em;
+  font-size: 2.4em;
   font-weight: 600;
 }
 .short-info > h3 > span {
@@ -198,19 +221,20 @@ header {
   text-decoration: underline;
 }
 .download-cv > .small-parrot {
-  height: 3em;
+  height: 2.5em;
   margin-left: 1em;
 }
 
 .profile-picture {
   background-color: rgb(247, 249, 127);
-  margin: 1.5em auto;
+  max-height: 15em;
+  margin: auto;
   overflow: hidden;
   border: 0.25em solid rgb(247, 249, 127);
   border-radius: 15em;
 }
 .profile-picture > img {
-  height: 20em;
+  height: 15em;
   scale: 1.05;
   transition: all 0.3s ease;
 }
@@ -218,92 +242,32 @@ header {
   scale: 1.075;
 }
 
-@media screen and (max-width: 400px) {
-  .short-info {
-    padding: 1em 1.5em;
-  }
-  .short-info > h3 {
-    font-size: 2.6em;
-  }
-}
-#education {
-  font-family: "Montserrat";
-  display: grid;
-  grid-template-columns: 50% 50%;
-  justify-content: space-between;
-  margin-top: 1.2em;
-  padding-bottom: 1.2em;
-  border-bottom: 1px solid rgb(221, 221, 221);
+/*@media screen and (max-width: 1250px) {
+    .profile-picture {
+        margin: 2em auto;
+    }
 }
 
-.my-projects {
-  text-align: center;
-}
-.my-projects h2 {
-  font-size: 3.2em;
-  font-weight: 600;
-  margin: 0.5em 0;
-}
-.my-projects span {
-  color: rgb(123, 211, 234);
-}
-
-.about-projects {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2em;
-}
-.about-projects > a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  border-radius: 1.15em;
-  color: #000;
-  text-decoration: none;
-}
-.about-projects > a:nth-child(1) {
-  background-color: rgb(255, 193, 193);
-}
-.about-projects > a:nth-child(2) {
-  background-color: rgb(185, 237, 221);
-}
-.about-projects > a > h5 {
-  margin: 0.2em;
-  font-size: 2.5em;
-  font-weight: 500;
-}
-.about-projects > a > p {
-  margin: 0;
-  font-size: 3em;
-  font-weight: 700;
-}
-
-@media screen and (max-width: 1350px) {
-  .my-projects h2 {
-    font-size: 4.2em;
-  }
-}
-@media screen and (max-width: 800px) {
-  .my-projects h2 {
-    font-size: 4em;
-  }
-}
+@media screen and (max-width: 700px) {
+    #introduction {
+        padding: 1.4em;
+    }
+}*/
 @media screen and (max-width: 600px) {
-  .about-projects > a > h5 {
-    font-size: 3em;
+  .short-info > h3 {
+    font-size: 2.2em;
   }
 }
 @media screen and (max-width: 500px) {
-  .my-projects h2 {
-    font-size: 3.2em;
+  #introduction {
+    font-size: 0.9em;
   }
 }
-#courses {
-  padding-top: 1.2em;
-  margin-bottom: 8em;
+@media screen and (max-width: 450px) {
+  .short-info {
+    font-size: 0.9em;
+  }
 }
-
 .course-box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -323,10 +287,9 @@ header {
 }
 
 .course-box-item {
-  overflow: hidden;
-  border-radius: 1.5em;
-  padding: 1.25em;
   background-color: #ececec;
+  padding: 1.25em;
+  border-radius: 1.15em;
   overflow: hidden;
   position: relative;
   z-index: 3;
@@ -343,10 +306,8 @@ header {
   z-index: 2;
 }
 .logo-and-name img {
-  max-width: 15em;
-  height: 5em;
+  height: 4em;
   border-radius: 0.75em;
-  transform: scale(1);
 }
 .logo-and-name h3 {
   font-size: 1.2em;
@@ -393,14 +354,22 @@ header {
   background-color: rgb(141, 223, 203);
 }
 
+@media screen and (max-width: 1250px) {
+  .description {
+    font-size: 0.9em;
+  }
+}
+@media screen and (max-width: 850px) {
+  #courses {
+    font-size: 0.85em;
+  }
+}
 @media screen and (max-width: 700px) {
   .course-box {
     grid-template-columns: 1fr 1fr;
   }
 }
 #about-me {
-  margin-top: 1.2em;
-  margin-bottom: 8em;
   border-radius: 1.15em;
 }
 #about-me > h5 {
@@ -408,39 +377,45 @@ header {
   font-size: 2.8em;
   margin: 0 1em;
 }
-#about-me > p {
+#about-me p {
+  margin: 0.5em 0;
   padding-left: 0.3em;
-  font-size: 1.2em;
-  border-left: 0.75em solid rgb(172, 179, 239);
+  border-left: 0.5em solid;
 }
-#about-me > p > a {
+#about-me p:nth-child(2) {
+  border-color: rgb(172, 179, 239);
+}
+#about-me p:nth-child(3) {
+  border-color: rgb(255, 193, 193);
+}
+#about-me p:nth-child(4) {
+  border-color: rgb(141, 223, 203);
+}
+#about-me p:nth-child(5) {
+  border-color: rgb(172, 179, 239);
+}
+#about-me p a {
   font-weight: 700;
 }
-#about-me > p > a:hover {
+#about-me p a:nth-child(1) {
+  border-bottom: 0.1em solid rgb(123, 211, 234);
+}
+#about-me p a:nth-child(2) {
+  border-bottom: 0.1em solid rgb(141, 223, 203);
+}
+#about-me p a:nth-child(3) {
+  border-bottom: 0.1em solid rgb(141, 223, 203);
+}
+#about-me p a:hover {
   top: -0.1em;
 }
 
-#hobby {
-  padding-top: 1.2em;
-  margin-bottom: 8em;
-}
-#hobby > h5 {
-  text-align: center;
-  font-size: 2.8em;
-  margin: 0 1em;
-}
-#hobby > p {
-  padding-left: 0.3em;
-  font-size: 1.2em;
-  border-left: 0.75em solid rgb(247, 249, 127);
-}
-
 footer {
-  background-color: rgb(228, 228, 228);
+  background-color: rgb(242, 242, 242);
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 3em;
+  height: 2em;
 }
 
 .contact-footer {
@@ -448,5 +423,4 @@ footer {
 }
 .contact-footer i {
   font-style: normal;
-  margin-left: 1em;
 }/*# sourceMappingURL=style.css.map */

@@ -1,9 +1,4 @@
 
-#courses {
-    padding-top: 1.2em;
-    margin-bottom: 8em;
-}
-
 .course-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -23,10 +18,9 @@
 }
 
 .course-box-item {
-    overflow: hidden;
-    border-radius: 1.5em;
-    padding: 1.25em;
     background-color: #ececec;
+    padding: 1.25em;
+    border-radius: $basic-radius;
     overflow: hidden;
     position: relative;
     z-index: 3;
@@ -44,10 +38,10 @@
     left: 0;
     z-index: 2;
     & img {
-        max-width: 15em;
-        height: 5em;
+        //max-width: 15em;
+        height: 4em;
         border-radius: 0.75em;
-        transform: scale(1);
+        //transform: scale(1);
     }
     & h3{
         font-size: 1.2em;
@@ -96,6 +90,17 @@
 }
 
 //Media
+@media screen and (max-width: 1250px) {
+    .description {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #courses {
+        font-size: 0.85em;
+    }
+}
 
 @media screen and (max-width: 700px) {
     .course-box {

@@ -9,63 +9,40 @@
     <title>Viktor</title>
 </head>
 <body>
-    <header class="container">
-        <div class="logo-and-name">
-            <div class="logo"><span>V</span></div>
-            <div class="name">Viktor</div>
-        </div>
-        <div class="navigation-buttons">
-            <a href="#about-me">O mne</a>
-            <a href="#courses">Kurzy</a>
-            <a href="#hobby">Hobby</a>
-        </div>
-        <div class="head">
-            <div class="corner"><div></div></div>
-            <div class="contact">
-                <a href="#contact">Kontakt</a>
-            </div>  
-        </div>
-    </header>
-    <section id="introduction" class="container">
-        <div class="short-info">
-            <h3>
-                Ahoj, som Viktor!<br>
-                <span>{</span>wannabe<span>}</span><br>
-                Frontend developer
-            </h3>
-            <div class="download-cv">
-                <a href="./download/cv.pdf" download="viktor-cv.pdf">Download my CV</a>
-                <img src="./img/parrot-2.png" class="small-parrot" alt="parrot">  
-            </div>    
-        </div>
-        <div class="profile-picture">
-            <img src="./img/viktorio.png" alt="">
-        </div>
-    </section>
-    <section id="education" class="container">
-        <div class="my-projects">
-            <h2>Moje Projekty<br><span>&</span> Vzdelávanie</h2>
-        </div>
-        <div class="about-projects">
-            <a href="https://skillmea.sk/online-kurzy" target="_blank">
-                <h5>Kurzy</h5>
-                <p>5+</p>
-            </a>
-            <a href="">
-                <h5>Projekty</h5>
-                <p>3+</p>
-            </a>
-        </div>
-    </section>
-    <section id="about-me" class="container">
-        <h5>O mne</h5>
-        <p>
-            Som začínajúci programátor s (aktuálnym) zameraním na webstránky. S programovaním som sa zoznámil prostredníctvom vzdelávacích kurzov na stránke <a href="https://skillmea.sk/" target="_blank">skillmea.sk</a>. Okrem videotutoriálov mi v napredovaní pomáha <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, ale aj stránky ako <span>stackoverflow</span>, <span>freefronted</span> a ďalšie...
-        </p>
-        <p>
-            Na základoch <span>HTML</span> a <span>CSS</span> som nadviazal s preprocesorom <span>SCSS</span>. Princípy programovania ako OOP, premenné, objekty, polia, cykly a podmienky som pochopil pomocou jazyka <span>PHP</span>. Najviac ma zaujal <span>JavaScript</span> a jeho framework <span>Vue.js</span>. V <a href="#courses">sekcii nižšie</a> uvádzam konrétne kurzy, ktoré som absolvoval a na ďalších veciach makám.
-        </p>
-    </section>    
+    <main class="container">
+        <section id="introduction" >
+            <div class="short-info">
+                <h3>
+                    Ahoj, som Viktor!<br>
+                    <span>{</span>wannabe<span>}</span><br>
+                    Web developer
+                </h3>
+                <div class="download-cv">
+                    <a href="./download/Viktor_Lipták_sk_CV.pdf" download="viktor-cv.pdf">Download my CV</a>
+                    <img src="./img/parrot-2.png" class="small-parrot" alt="parrot">  
+                </div>    
+            </div>
+            <div class="profile-picture">
+                <img src="./img/viktorio.png" alt="">
+            </div>
+        </section>
+        <section id="about-me">
+            <h5>O mne</h5>
+            <p>
+                Som začínajúci programátor s (aktuálnym) zameraním na webstránky. S programovaním som sa zoznámil prostredníctvom vzdelávacích kurzov na stránke <a href="https://skillmea.sk/" target="_blank">skillmea.sk</a>. Okrem videotutoriálov mi v napredovaní pomáha <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>, ale aj stránky ako <span>stackoverflow</span>, <span>freefronted</span> a ďalšie...
+            </p>
+            <p>
+                Na základoch <span>HTML</span> a <span>CSS</span> som nadviazal s preprocesorom <span>SCSS</span>. Princípy programovania ako OOP, premenné, objekty, polia, cykly a podmienky som pochopil pomocou jazyka <span>PHP</span>. Najviac ma zaujal <span>JavaScript</span> a jeho framework <span>Vue.js</span>. V <a href="#courses">sekcii nižšie</a> uvádzam konkrétne kurzy, ktoré som absolvoval a na ďalších veciach makám.
+            </p>
+            <p>
+                Voľný čas využívam naplno. Hrám futbal a ešte intenzívnejšie ho sledujem. V poslednom čase tiež hokej, snažím sa navštevovať posilku, ale nepohrdnem žiadnym druhom pohybu.
+                Veľkou vášňou sú audioknihy. Majú výhodu, že sa dajú kombinovať s činnosťami, pri ktorých netreba maximálne sústredenie.
+                Z času na čas rád zadrvím aj videohry (budovateľské/survival stratégie), a s partou stolové hry.
+
+                <!--Som športovo založený typ. Hrám (a intenzívne sledujem) futbal, hokej, snažím sa navštevovať posilku a rád skúšam každý druh športu. Ďalším záujom sú knihy, väčšinou ich audio forma. Najviac autori Yuval Noah Harari, John Grisham, Chris Carter, Jo Nesbo a Dominik Dán. Z oblasti videohier preferujem budovateľské/survival stratégie, ale aj FIFU a klasiku- MAFIA (I a II).-->
+            </p>
+        </section> 
+    </main>
     <section id="courses" class="container">
         <div class="course-box">
             <div>
@@ -140,30 +117,48 @@
             </a>      
         </div>
     </section>
-    <section id="hobby" class="container">
-        <h5>Voľný čas</h5>
-        <p>
-            Som športovo založený typ. Hrám (a intenzívne sledujem) futbal, hokej, snažím sa navštevovať posilku a rád skúšam každý druh športu.
-            <!--Voľný čas venujem často a rád futbalu. Rád hrám, či už súťažne (aj keď len horskú ligu- o čo menej technických zručností v nej vidieť, o to viac zápalu predvádzajú aktéri), ale aj s partiou ideálne formou futsalu. Futbal nielen hrám, ale často aj sledujem (hala MADRID!). Nepravidelne tiež navštevujem posilku a zahrám si aj hokej (ten viac sledujem ako hrám)-->
-        </p>
-        <p>
-            Ďalším záujom sú knihy, väčšinou ich audio forma. Najviac autori Yuval Noah Harari, John Grisham, Chris Carter, Jo Nesbo a Dominik Dán.
-            <!--Ďalšou veľkou záľubou sú knihy, najčastejšie audioknihy. Ich obrovskou výhodou je, že sa dajú kombinovať s pohybom, napríklad behom, chôdzou či s cvičením. Top žánre sú literatúra faktu (som ten typ človeka, ktorý sa snaží pochopiť svet pomocou vedy a faktov), kriminálna tématika a komédia. Obľúbení autori: Yuval Noah Harari, John Grisham, Chris Carter, Dominik Dán.-->
-        </p>
-        <p>
-            Z oblasti videohier preferujem budovateľské/survival stratégie, ale aj FIFU a klasiku- MAFIA (I a II).
-            <!--Samozrejme rád si zadrvím aj nejakú videohru. Čo sa týka hry viacerých hráčov, som obstojný vo FIFE. Ak sa jedná o single playerovky, preferujem budovateľské/survival stratégie napr. Transport Fever, Rome Total War (II), Craft Word, Frost Punk, ale nepohrdnem ani GTAčkom a mojou láskou, českou hrou MAFIA (časti I a II).-->
-        </p>
-    </section>
-    <footer class="container" id="contact">
+    <footer id="contact">
         <div class="contact-footer">
             <a href="tel:+421944605452">
-                <i class="bi bi-telephone-fill">  0944605452</i>
+                <i class="bi bi-telephone-fill"></i>
+                <span>0944605452</span>
             </a>
             <a href="mailto:victor.liptak@gmail.com">
-                <i class="bi bi-envelope-fill">  victor.liptak@gmail.com</i>
+                <i class="bi bi-envelope-fill"></i>
+                <span>victor.liptak@gmail.com</span>
             </a>
         </div>
     </footer>
+    <!--<header class="container">
+        <div class="logo-and-name">
+            <div class="logo"><span>V</span></div>
+            <div class="name">Viktor</div>
+        </div>
+        <div class="navigation-buttons">
+            <a href="#about-me">O mne</a>
+            <a href="#courses">Kurzy</a>
+        </div>
+        <div class="head">
+            <div class="corner"><div></div></div>
+            <div class="contact">
+                <a href="#contact">Kontakt</a>
+            </div>  
+        </div>
+    </header>
+    <section id="education" class="container">
+        <div class="my-projects">
+            <h2>Moje Projekty<br><span>&</span> Vzdelávanie</h2>
+        </div>
+        <div class="about-projects">
+            <a href="https://skillmea.sk/online-kurzy" target="_blank">
+                <h5>Kurzy</h5>
+                <p>5+</p>
+            </a>
+            <a href="">
+                <h5>Projekty</h5>
+                <p>3+</p>
+            </a>
+        </div>
+    </section>-->    
 </body>
 </html>
