@@ -2,7 +2,7 @@ footer {
     background-color: $grey;
     display: flex;
     justify-content: flex-end;
-    height: 2em;
+    height: 3em;
 }
 
 .contact-footer {
@@ -13,5 +13,17 @@ footer {
     margin: 0 1em;
     & i {
         font-style: normal;
+    }
+}
+
+//Media
+
+@media screen and (max-width: 1250px) {
+    footer {
+        justify-content: center;
+    }
+
+    .contact-footer {
+        width: 800px;
     }
 }

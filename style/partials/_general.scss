@@ -10,7 +10,8 @@ body {
     min-height: 100vh;
     margin: 0;
     font-family: 'Montserrat';
-    font-size: 1em;   
+    font-size: 1em;
+    transition: all 0.15s ease;  
     filter: blur(0.02em);
 }
 
@@ -38,6 +39,7 @@ a {
 }
 
 //Media
+
 @media screen and (max-width: 1450px) {
     body {
         font-size: 0.95em;
